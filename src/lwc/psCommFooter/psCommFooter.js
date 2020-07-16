@@ -4,7 +4,7 @@ import getConfig from '@salesforce/apex/PSCommFooterController.getConfig';
 
 export default class PsCommFooter extends LightningElement {
     @api templateName;
-    @api configName = 'Troy Test';
+    @api configName;
     config;
 
     get isUSWDS() {
