@@ -25,7 +25,7 @@ The above are the default color styles from the USWDS design system. Certain col
 
 # Configuration
 
-The configuration of this component is driven by 4 custom objects as defined in this schema. These object model and configuration parameters were primarily driven based on the USWDS footer component/variants but can provide base for other footer layout options in the future.
+The configuration of this component is driven by 4 custom objects as defined in this schema (yes...I am not using Custom Metadata. Once they can support related lists easily in UI, then I will make switch). These object model and configuration parameters were primarily driven based on the USWDS footer component/variants but can provide base for other footer layout options in the future.
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Schema.png "Footer-Schema")
 
