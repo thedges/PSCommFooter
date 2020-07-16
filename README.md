@@ -119,6 +119,10 @@ Here are the color overrides for the USWDS footer component. As shown in the scr
 | Secondary Color 3 | Text | The agency contact center name (i.e. secondary label) text color |
 | Secondary Color 4 | Text | The background color of the social icons |
 
+Here is diagram of color assignments:
+
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Color-USWDS.png "Footer-Color-USWDS")
+
 
 # Library Dependency
 
