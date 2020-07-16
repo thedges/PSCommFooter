@@ -3,6 +3,14 @@ THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/
 
 Simple LWC demo component that provides a configurable footer for communities 
 
+# Library Dependency
+
+This component utilizes the following:
+  * [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) - a design system for the federal government for public facing government websites. This component primary utilizes the CSS styling for the [footer component](https://designsystem.digital.gov/components/footer/)
+  
+  
+# Installation Instructions
+
 <b>Here are steps to use this component:</b>
   1. Install the component per the **Deploy to Salesforce** button below
   2. Setup users to have access to custom objects that drive the component. Either assign the permset **PSCommFooter** to your users  ...or... make sure users have access to following:
