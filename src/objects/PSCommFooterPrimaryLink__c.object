@@ -154,19 +154,6 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
     <fields>
-        <fullName>Community_Footer_Config__c</fullName>
-        <externalId>false</externalId>
-        <label>Community Footer Config</label>
-        <referenceTo>PSCommFooterConfig__c</referenceTo>
-        <relationshipLabel>PSCommFooterPrimaryLink</relationshipLabel>
-        <relationshipName>PSCommFooterPrimaryLink</relationshipName>
-        <relationshipOrder>0</relationshipOrder>
-        <reparentableMasterDetail>false</reparentableMasterDetail>
-        <trackTrending>false</trackTrending>
-        <type>MasterDetail</type>
-        <writeRequiresMasterRead>false</writeRequiresMasterRead>
-    </fields>
-    <fields>
         <fullName>Label__c</fullName>
         <externalId>false</externalId>
         <label>Label</label>
@@ -186,6 +173,19 @@
         <trackTrending>false</trackTrending>
         <type>Number</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PSCommFooterConfig__c</fullName>
+        <externalId>false</externalId>
+        <label>PSCommFooterConfig</label>
+        <referenceTo>PSCommFooterConfig__c</referenceTo>
+        <relationshipLabel>PSCommFooterPrimaryLink</relationshipLabel>
+        <relationshipName>PSCommFooterPrimaryLink</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
     </fields>
     <fields>
         <fullName>URL__c</fullName>

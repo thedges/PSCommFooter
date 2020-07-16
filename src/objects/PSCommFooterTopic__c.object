@@ -180,7 +180,7 @@
     <fields>
         <fullName>PSCommFooterConfig__c</fullName>
         <externalId>false</externalId>
-        <label>Community Footer Config</label>
+        <label>PSCommFooterConfig</label>
         <referenceTo>PSCommFooterConfig__c</referenceTo>
         <relationshipLabel>PSCommFooterTopic</relationshipLabel>
         <relationshipName>PSCommFooterTopic</relationshipName>

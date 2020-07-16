@@ -204,7 +204,7 @@
         <fields>NAME</fields>
         <fields>Label__c</fields>
         <fields>Order__c</fields>
-        <relatedList>PSCommFooterPrimaryLink__c.Community_Footer_Config__c</relatedList>
+        <relatedList>PSCommFooterPrimaryLink__c.PSCommFooterConfig__c</relatedList>
         <sortField>Order__c</sortField>
         <sortOrder>Asc</sortOrder>
     </relatedLists>

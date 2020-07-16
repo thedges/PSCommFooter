@@ -2,6 +2,7 @@ public without sharing class PSCommFooterController {
     @AuraEnabled
     public static String getConfig(String configName)
     {
+        
         Map<String, Object> resp = new Map<String, Object>();
 
         if (configName != null)
