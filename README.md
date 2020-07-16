@@ -1,18 +1,61 @@
 # PSCommFooter
 THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
 
-This component provides an easy way to add a configurable footer to your community. Many SEs will create a static image for the footer using image editor tools. While this can provide a high fidelity footer, the footer is not easily updateable by next SE and the static image is not responsive to smaller screen formats. This component provides a fully configurable footer that is driven based on configuration data, is responsive to various formats, and is easy to change functionality for as requirements change.
+This component provides an easy way to add a configurable footer to your community (no HTML or image editor needed). Many SEs will create a static image for the footer using image editor tools. While this can provide a high fidelity footer, the footer is not easily updateable by next SE and the static image is not responsive to smaller screen formats. This component provides a fully configurable footer that is driven based on configuration data, is responsive to various formats, and is easy to change functionality for as requirements change.
 
-The first release of this component is based on the [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) and specifically their [footer component](https://designsystem.digital.gov/components/footer/) definition. The USWDS footer has 3 options: Big, Default, and Slim which all 3 are supported. Here are 3 screenshots of the component for the 3 options:
+The first release of this component is based on the [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) and specifically their [footer component](https://designsystem.digital.gov/components/footer/) definition. The USWDS footer has 3 options: Big, Default, and Slim which all 3 are supported. Here are 3 screenshots of this component implementing the 3 USWDS options:
 
-## USWDS Big
+**USWDS Big**
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Big.png "Footer-Big")
 
-## USWDS Default
+**USWDS Default**
 
-## USWDS Slim
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Default.png "Footer-Default")
 
+**USWDS Slim**
+
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Slim.png "Footer-Slim")
+
+**Color Overrides**
+
+The above are the default color styles from the USWDS design system. Certain color styles (background color, text color, etc...) can be overriden in the component configuration to match closer to agency/customer site if needed. Here is an example of customized colors.
+
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Color.png "Footer-Color")
+
+# Configuration
+
+The configuration of this component is driven by 4 custom objects as defined in this schema:
+
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Schema.png "Footer-Schema")
+
+**PSCommFooterConfig**
+
+**PSCommFooterTopic**
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for hyperlink |
+| URL | Text | The URL target of the hyperlink |
+| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+
+**PSCommFooterLink**
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for hyperlink |
+| URL | Text | The URL target of the hyperlink |
+| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+
+**PSCommFooterPrimaryLink**
+
+When using the "Default" or "Slim" versions of the USWDS footer, this object provides a list of primary links. These are children records to PSCommFooterConfig record.
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for hyperlink |
+| URL | Text | The URL target of the hyperlink |
+| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
 
 # Library Dependency
 
