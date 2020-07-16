@@ -31,15 +31,62 @@ The configuration of this component is driven by 4 custom objects as defined in 
 
 **PSCommFooterConfig**
 
-**PSCommFooterTopic**
+This is the main configuration object for the component. Create a record for each footer configuration you would like to create (i.e. create footer for each community you have defined in your org). The field definitions for this object will be broken up in to sections:
+
+*Base Information* 
 
 | Parameter  | Type | Definition |
 | ------------- | ------------- |------------- |
-| Label | Text | The text label for hyperlink |
-| URL | Text | The URL target of the hyperlink |
-| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+| Config Name | Text | The name for this configuration. This will be used in picklist for the component configuration. |
+| Logo Icon | Text | A link to custom/agency icon. Upload image file as static resource and reference like '/resource/STATIC_RESOURCE_NAME'. |
+| Primary Label | Text | The customer name |
+| Secondary Label | Text | A name for customer's contact center |
+| Email Signup? | Checkbox | Show the email signup section in the footer. Currently this is non-functional and for display purposes only. |
+| Powered by Salesforce? | Checkbox | **NOT IMPLEMENTED** To display a "Powered by Salesforce" are in footer |
+| Copyright | Text | **NOT IMPLEMENTED** To display a copyright in footer |
+
+*Contact Information*
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Street | Text | Customer street address |
+| City | Text | Customer city |
+| State | Text | Customer state |
+| Zipcode | Text | Customer zipcode |
+| Phone | Phone | Customer phone # |
+| Email | Email | Customer email |
+
+*Social* 
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Facebook | URL | Full URL to customer Facebook page |
+| Twitter | URL | Full URL to customer Twitter page |
+| Youtube | URL | Full URL to customer Youtube page |
+| RSS | URL | Full URL to customer RSS feed |
+| LinkedIn | URL | Full URL to customer LinkedIn page |
+| Home | URL | Full URL to customer Home page |
+
+*Color Overrides*
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Primary Color 1..5 | Text | Five primary color options |
+| Secondary Color 1..5 | Text | Five secondary color options |
+
+
+**PSCommFooterTopic**
+
+When using the "Big" version of the USWDS footer, this object provides a list of topic areas (vertical lists in top section of footer). These are children records to PSCommFooterConfig record.
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for the topic |
+| Order | Text | The display order for the topics (i.e. the order they are layed out on page) |
 
 **PSCommFooterLink**
+
+When using the "Big" version of the USWDS footer, this object provides a 1..many hyperlinks for a topic as defined above. These are children records to PSCommFooterTopic record.
 
 | Parameter  | Type | Definition |
 | ------------- | ------------- |------------- |
