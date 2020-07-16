@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>PSCommFooterConfigPicklist</members>
+        <members>PSCommFooterController</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>PSCommFooterConfig__c</members>
+        <members>PSCommFooterLink__c</members>
+        <members>PSCommFooterPrimaryLink__c</members>
+        <members>PSCommFooterTopic__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>PSCommFooterConfig__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Community_Footer_Config_Record_Page</members>
+        <members>PSCommFooterTopic_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>PSCommFooterConfig__c-Community Footer Config Layout</members>
+        <members>PSCommFooterLink__c-PSCommFooterLink Layout</members>
+        <members>PSCommFooterPrimaryLink__c-PSCommFooterPrimaryLink Layout</members>
+        <members>PSCommFooterTopic__c-PSCommFooterTopic Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>psCommFooter</members>
+        <members>psFooterUSWDS</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>PSCommFooter</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>USWDS</members>
+        <name>StaticResource</name>
+    </types>
+    <version>48.0</version>
+</Package>

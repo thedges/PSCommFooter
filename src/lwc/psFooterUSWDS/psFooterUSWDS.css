@@ -1,0 +1,51 @@
+.usa-footer__secondary-link + .usa-footer__secondary-link {
+  padding-top: 7px;
+}
+
+.usa-social-link--linkedin {
+  background-image: url(/sfsites/c/resource/USWDS/extras/linkedin.svg),
+    linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+}
+
+.usa-social-link--home {
+  background-image: url(/sfsites/c/resource/USWDS/extras/home.svg),
+    linear-gradient(transparent, transparent);
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 30em) {
+  .usa-footer--big
+    .usa-footer__primary-content--collapsible
+    .usa-list--unstyled {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-top: 0.25rem !important;
+  }
+}
+
+@media (min-width: 64em) {
+  .grid-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .usa-footer__nav {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+
+  .usa-footer__primary-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+}
+
+.grid-container, .usa-footer__primary-container, .usa-footer__nav {
+  max-width: 1100px;
+}
+
+.usa-footer__secondary-link a {
+  text-decoration: none;
+}

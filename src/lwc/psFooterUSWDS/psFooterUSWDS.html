@@ -1,0 +1,170 @@
+<template>
+    <footer class={footerClass}>
+
+        <div class="usa-footer__primary-section" style={primaryFooterStyle}>
+            <template if:true={isDefault}>
+                <nav class="usa-footer__nav" aria-label="Footer navigation">
+                    <ul class="grid-row grid-gap">
+                        <template for:each={config.primayLinks} for:item="link">
+                            <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content" key={link.id}>
+                                <a class="usa-footer__primary-link" href={link.url} style={primaryLinkStyle}>{link.label}</a>
+                            </li>
+                        </template>
+                    </ul>
+                </nav>
+            </template>
+            <template if:true={isBig}>
+            <div class="grid-container">
+                <div class="grid-row grid-gap">
+                    <div class="tablet:grid-col-8">
+                        <nav class="usa-footer__nav" aria-label="Footer navigation">
+                            <div class="grid-row grid-gap-4">
+                                <template for:each={config.topics} for:item="topic">
+                                    <div class="mobile-lg:grid-col-6 desktop:grid-col-3" key={topic.id}>
+                                        <section
+                                            class="usa-footer__primary-content usa-footer__primary-content--collapsible">
+                                            <h4 class="usa-footer__primary-link" style={topicStyle}>{topic.label}</h4>
+                                            <ul class="usa-list usa-list--unstyled">
+                                                <template for:each={topic.links} for:item="link">
+                                                    <li class="usa-footer__secondary-link" key={link.id}><a
+                                                            href={link.url} style={linkStyle}>{link.label}</a></li>
+                                                </template>
+                                            </ul>
+
+                                        </section>
+                                    </div>
+                                </template>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="tablet:grid-col-4">
+                        <template if:true={isEmailSignup}>
+                            <div class="usa-sign-up">
+                                <h3 class="usa-sign-up__heading" style={emailTextStyle}>Sign up</h3>
+                                <form class="usa-form">
+                                    <label class="usa-label" for="email" id=""  style={emailTextStyle}>Your email address</label>
+                                    <input class="usa-input" id="email" name="email" type="email">
+                                    <button class="usa-button" type="submit">Sign up</button>
+                                </form>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+           </template>
+           <template if:true={isSlim}>
+            <div class="usa-footer__primary-container grid-row">
+                <div class="mobile-lg:grid-col-8">
+                    <nav class="usa-footer__nav" aria-label="Footer navigation">
+                        <ul class="grid-row grid-gap">
+                            <template for:each={config.primayLinks} for:item="link">
+                                <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content" key={link.id}>
+                                    <a class="usa-footer__primary-link" href={link.url} style={primaryLinkStyle}>{link.label}</a>
+                                </li>
+                            </template>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mobile-lg:grid-col-4">
+                    <address class="usa-footer__address">
+                        <div class="grid-row grid-gap">
+                            <template if:true={isPhone}>
+                            <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                                <div class="usa-footer__contact-info">
+                                    <a href={phoneURL} style={secondarySubLabelStyle}>{config.phone}</a>
+                                </div>
+                            </div>
+                            </template>
+                            <template if:true={isEmail}>
+                            <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
+                                <div class="usa-footer__contact-info">
+                                    <a href={emailURL} style={secondarySubLabelStyle}>{config.email}</a>
+                                </div>
+                            </div>
+                            </template>
+                        </div>
+                    </address>
+                </div>
+            </div>
+           </template>
+        </div>
+        <div class="usa-footer__secondary-section"  style={secondaryFooterStyle}>
+            <div class="grid-container">
+                <div class="grid-row grid-gap">
+                    <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
+                        <div class="mobile-lg:grid-col-auto">
+                            <img class="usa-footer__logo-img" src={logoIcon} alt="">
+                        </div>
+                        <div class="mobile-lg:grid-col-auto">
+                            <h3 class="usa-footer__logo-heading" style={primaryLabelStyle}>{config.primaryLabel}</h3>
+                        </div>
+                    </div>
+                    <div class="usa-footer__contact-links mobile-lg:grid-col-6">
+                        <template if:true={isNotSlim}>
+                        <div class="usa-footer__social-links grid-row grid-gap-1">
+                            <template if:true={isFacebook}>
+                                <div class="grid-col-auto">
+                                    <a class="usa-social-link usa-social-link--facebook" href={config.facebook} style={socialStyle}>
+                                        <span>Facebook</span>
+                                    </a>
+                                </div>
+                            </template>
+                            <template if:true={isTwitter}>
+                                <div class="grid-col-auto">
+                                    <a class="usa-social-link usa-social-link--twitter" href={config.twitter} style={socialStyle}>
+                                        <span>Twitter</span>
+                                    </a>
+                                </div>
+                            </template>
+                            <template if:true={isYoutube}>
+                                <div class="grid-col-auto">
+                                    <a class="usa-social-link usa-social-link--youtube" href={config.youtube} style={socialStyle}>
+                                        <span>YouTube</span>
+                                    </a>
+                                </div>
+                            </template>
+                            <template if:true={isRSS}>
+                                <div class="grid-col-auto">
+                                    <a class="usa-social-link usa-social-link--rss" href={config.rss} style={socialStyle}>
+                                        <span>RSS</span>
+                                    </a>
+                                </div>
+                            </template>
+                            <template if:true={isLinkedIn}>
+                                <div class="grid-col-auto">
+                                    <a class="usa-social-link usa-social-link--li" href={config.linkedin} style={socialStyle}>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                </div>
+                            </template>
+                            <template if:true={isHome}>
+                                <div class="grid-col-auto">
+                                    <a class="usa-social-link usa-social-link--home" href={config.home} style={socialStyle}>
+                                        <span>Home</span>
+                                    </a>
+                                </div>
+                            </template>
+                        </div>
+                        <h3 class="usa-footer__contact-heading" style={secondaryLabelStyle}>{config.secondaryLabel}</h3>
+
+                        <address class="usa-footer__address">
+                            <div class="usa-footer__contact-info grid-row grid-gap">
+                                <template if:true={isPhone}>
+                                    <div class="grid-col-auto">
+                                        <a href={phoneURL}  style={secondarySubLabelStyle}>{config.phone}</a>
+                                    </div>
+                                </template>
+                                <template if:true={isEmail}>
+                                    <div class="grid-col-auto">
+                                        <a href={emailURL}  style={secondarySubLabelStyle}>{config.email}</a>
+                                    </div>
+                                </template>
+                            </div>
+                        </address>
+                        </template>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</template>
