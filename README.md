@@ -139,8 +139,14 @@ This component utilizes the following:
      * Read access to all fields in above objects
      * Access to PSCommFooterController and PSCommFooterConfigPicklist Apex classes
      * Access to PSCommFooterConfig tab
-  3. The default external org wide default for the PSCommFooterConfig object will default to 'Private'. Make sure to set to 'Public Read Only' else **the component will not show in community**.
-  4. Next create a configuration to drive the component:
+  3. The default external org wide default (Setup > Security > Sharing Settings) for the PSCommFooterConfig object may default to 'Private'. Make sure to set to 'Public Read Only' else **the component will not show in community**.
+  4. For Community non-auth users to be able to see the footer component, you need to assign the **PSCommFooter** permset to the non-auth user for the target community. Here are steps to get to that user record:
+     * Go **Community Builder**, click the gear icon
+     * Click the link below "Guest User Profile" section
+     * Click the "Assigned Users" button at to of profile page
+     * Click on the user name
+     * Assign the PSCommFooter permset
+  5. Next create a configuration to drive the component:
      * First navigate to the **PSCommFooterConfig tab** and create a record. Fill out all appropriate fields per above definitions.
      * If you are going to use the "Big" option, create child PSCommFooterTopics
        * For each PSCommFooterTopic created above, create 1..many PSCommFooterLink records
