@@ -25,7 +25,7 @@ The above are the default color styles from the USWDS design system. Certain col
 
 # Configuration
 
-The configuration of this component is driven by 4 custom objects as defined in this schema:
+The configuration of this component is driven by 4 custom objects as defined in this schema. These object model and configuration parameters were primarily driven based on the USWDS footer component/variants but can provide base for other footer layout options in the future.
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Schema.png "Footer-Schema")
 
@@ -56,7 +56,7 @@ This is the main configuration object for the component. Create a record for eac
 | Phone | Phone | Customer phone # |
 | Email | Email | Customer email |
 
-*Social* 
+*Social* - any social icon not defined will not show up in footer
 
 | Parameter  | Type | Definition |
 | ------------- | ------------- |------------- |
@@ -67,7 +67,7 @@ This is the main configuration object for the component. Create a record for eac
 | LinkedIn | URL | Full URL to customer LinkedIn page |
 | Home | URL | Full URL to customer Home page |
 
-*Color Overrides*
+*Color Overrides* - ability to override the default color scheme. The color mappings to the specific template is provided below. All colors should be in hex format with leading '#'. An example is '#001a4d".
 
 | Parameter  | Type | Definition |
 | ------------- | ------------- |------------- |
@@ -103,6 +103,22 @@ When using the "Default" or "Slim" versions of the USWDS footer, this object pro
 | Label | Text | The text label for hyperlink |
 | URL | Text | The URL target of the hyperlink |
 | Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+
+# USWDS Component Color Overrides
+
+Here are the color overrides for the USWDS footer component. As shown in the screenshots above, the USWDS component has a top "primary" section and a bottom "secondary" section. Here are mappings of the configuration color fields to the USWDS component:
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Primary Color 1 | Text | Background color of the top primary section |
+| Primary Color 2 | Text | Text color of the topic header strings |
+| Primary Color 3 | Text | Text color of the links (i.e. hyperlinks) under each topic |
+| Primary Color 4 | Text | The email signup text color|
+| Secondary Color 1 | Text | Background color of the bottom secondary section |
+| Secondary Color 2 | Text | The agency (i.e. primary label) text color |
+| Secondary Color 3 | Text | The agency contact center name (i.e. secondary label) text color |
+| Secondary Color 4 | Text | The background color of the social icons |
+
 
 # Library Dependency
 
