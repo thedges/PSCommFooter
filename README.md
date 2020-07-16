@@ -141,7 +141,7 @@ This component utilizes the following:
      * Access to PSCommFooterConfig tab
   3. The default external org wide default (Setup > Security > Sharing Settings) for the PSCommFooterConfig object may default to 'Private'. Make sure to set to 'Public Read Only' else **the component will not show in community**.
   4. For Community non-auth users to be able to see the footer component, you need to assign the **PSCommFooter** permset to the non-auth user for the target community. Here are steps to get to that user record:
-     * Go **Community Builder**, click the gear icon
+     * In **Community Builder**, click the gear icon in left-hand options
      * Click the link below "Guest User Profile" section
      * Click the "Assigned Users" button at to of profile page
      * Click on the user name
