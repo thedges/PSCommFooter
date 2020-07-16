@@ -1,7 +1,18 @@
 # PSCommFooter
 THIS SOFTWARE IS COVERED BY [THIS DISCLAIMER](https://raw.githubusercontent.com/thedges/Disclaimer/master/disclaimer.txt).
 
-Simple LWC demo component that provides a configurable footer for communities 
+This component provides an easy way to add a configurable footer to your community. Many SEs will create a static image for the footer using image editor tools. While this can provide a high fidelity footer, the footer is not easily updateable by next SE and the static image is not responsive to smaller screen formats. This component provides a fully configurable footer that is driven based on configuration data, is responsive to various formats, and is easy to change functionality for as requirements change.
+
+The first release of this component is based on the [U.S. Web Design System (USWDS)](https://designsystem.digital.gov/) and specifically their [footer component](https://designsystem.digital.gov/components/footer/) definition. The USWDS footer has 3 options: Big, Default, and Slim which all 3 are supported. Here are 3 screenshots of the component for the 3 options:
+
+## USWDS Big
+
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Big.png "Footer-Big")
+
+## USWDS Default
+
+## USWDS Slim
+
 
 # Library Dependency
 
