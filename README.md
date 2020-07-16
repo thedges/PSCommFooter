@@ -9,17 +9,16 @@ The first release of this component is based on the [U.S. Web Design System (USW
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Big.png "Footer-Big")
 
-### USWDS Default
+**USWDS Default**
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Default.png "Footer-Default")
 
-### USWDS Slim
+**USWDS Slim**
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Slim.png "Footer-Slim")
 
-
+**Color Overrides**
 The above are the default color from the USWDS styling. Certain aspections (background color, text color, etc...) can be configured to override the default styling to match closer to agency site if needed. Here is an example of customized colors.
-
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Color.png "Footer-Color")
 
