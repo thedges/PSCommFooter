@@ -23,6 +23,40 @@ The above are the default color styles from the USWDS design system. Certain col
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Color.png "Footer-Color")
 
+# Configuration
+
+The configuration of this component is driven by 4 custom objects as defined in this schema:
+
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Schema.png "Footer-Schema")
+
+**PSCommFooterConfig**
+
+**PSCommFooterTopic**
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for hyperlink |
+| URL | Text | The URL target of the hyperlink |
+| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+
+**PSCommFooterLink**
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for hyperlink |
+| URL | Text | The URL target of the hyperlink |
+| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+
+**PSCommFooterPrimaryLink**
+
+When using the "Default" or "Slim" versions of the USWDS footer, this object provides a list of primary links. These are children records to PSCommFooterConfig record.
+
+| Parameter  | Type | Definition |
+| ------------- | ------------- |------------- |
+| Label | Text | The text label for hyperlink |
+| URL | Text | The URL target of the hyperlink |
+| Order | Text | The display order for the primary links (i.e. the order they are layed out on page) |
+
 # Library Dependency
 
 This component utilizes the following:
