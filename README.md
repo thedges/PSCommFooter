@@ -7,7 +7,7 @@ The first release of this component is based on the [U.S. Web Design System (USW
 
 **USWDS Big**
 
-![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Big.png "Footer-Big")
+![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Big2.png "Footer-Big")
 
 **USWDS Default**
 
