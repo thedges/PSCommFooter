@@ -19,7 +19,7 @@ The first release of this component is based on the [U.S. Web Design System (USW
 
 **Color Overrides**
 
-The above are the default color styles from the USWDS design system. Certain aspections (background color, text color, etc...) can be configured to override the default styling to match closer to agency site if needed. Here is an example of customized colors.
+The above are the default color styles from the USWDS design system. Certain color styles (background color, text color, etc...) can be overriden in the component configuration to match closer to agency/customer site if needed. Here is an example of customized colors.
 
 ![alt text](https://github.com/thedges/PSCommFooter/blob/master/Footer-Color.png "Footer-Color")
 
