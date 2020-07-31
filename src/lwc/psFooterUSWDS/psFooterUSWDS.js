@@ -79,7 +79,7 @@ export default class PsFooterUSWDS extends LightningElement {
         {
           if (this.config.logoIcon.startsWith('/resource'))
           {
-              return '/sfsites/c' + this.config.logoIcon;
+              return 'sfsites/c' + this.config.logoIcon;
           }
           else
           {

@@ -3,13 +3,13 @@
 }
 
 .usa-social-link--linkedin {
-  background-image: url(/sfsites/c/resource/USWDS/extras/linkedin.svg),
+  background-image: url(sfsites/c/resource/USWDS/extras/linkedin.svg),
     linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
 }
 
 .usa-social-link--home {
-  background-image: url(/sfsites/c/resource/USWDS/extras/home.svg),
+  background-image: url(sfsites/c/resource/USWDS/extras/home.svg),
     linear-gradient(transparent, transparent);
   background-repeat: no-repeat;
 }
