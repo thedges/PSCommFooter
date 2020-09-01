@@ -149,10 +149,16 @@ export default class PsFooterUSWDS extends LightningElement {
     }
 
     get primaryLabelStyle() {
+        /*
         if (this.config.secondaryColor2)
         {
             return 'color: ' + this.config.secondaryColor2;
         }
+        */
+       if (this.config.primaryColor2)
+       {
+           return 'color: ' + this.config.primaryColor2;
+       }
     }
 
     get secondaryLabelStyle() {
