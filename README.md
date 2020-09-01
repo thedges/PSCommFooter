@@ -146,6 +146,11 @@ This component utilizes the following:
      * Click the "Assigned Users" button at to of profile page
      * Click on the user name
      * Assign the PSCommFooter permset
+     
+     Also, you will need to create a Sharing Set to give "read" access to the PSCommFooterConfig__c object to guest user. You can access this under **Setup > Security > Sharing Settings** and scroll near bottom to find PSCommFooterConfig object. Here is sample of that configuration that provides read access to the community guest user:
+     
+     ![alt text](https://github.com/thedges/PSCommFooter/blob/master/PSCommFooter-Guest-Sharing.png "Footer-NonAuth-Community-User")
+     
   5. Next create a configuration to drive the component:
      * First navigate to the **PSCommFooterConfig tab** and create a record. Fill out all appropriate fields per above definitions.
      * If you are going to use the "Big" option, create child PSCommFooterTopics
