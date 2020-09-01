@@ -1,6 +1,7 @@
 import { LightningElement, api } from 'lwc';
 import { loadStyle } from 'lightning/platformResourceLoader';
 import USWDS from '@salesforce/resourceUrl/USWDS';
+import BASEPATH from '@salesforce/community/basePath';
 
 export default class PsFooterUSWDS extends LightningElement {
     @api config;
@@ -79,7 +80,8 @@ export default class PsFooterUSWDS extends LightningElement {
         {
           if (this.config.logoIcon.startsWith('/resource'))
           {
-              return 'sfsites/c' + this.config.logoIcon;
+              //return 'sfsites/c' + this.config.logoIcon;
+              return BASEPATH.replace('/s', this.config.logoIcon)
           }
           else
           {
@@ -172,6 +174,38 @@ export default class PsFooterUSWDS extends LightningElement {
         {
             return 'background-color: ' + this.config.secondaryColor4;
         }  
+    }
+
+    get linkedinStyle() {
+        var style;
+
+        let res = BASEPATH.replace('/s', '/resource/USWDS/extras/linkedin.svg')
+
+        style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
+
+        if (this.config.secondaryColor4)
+        {
+            style = style + '; background-color: ' + this.config.secondaryColor4;
+        }  
+
+        return style;
+
+    }
+
+    get homeStyle() {
+        var style;
+
+        let res = BASEPATH.replace('/s', '/resource/USWDS/extras/home.svg')
+
+        style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
+
+        if (this.config.secondaryColor4)
+        {
+            style = style + '; background-color: ' + this.config.secondaryColor4;
+        }  
+
+        return style;
+
     }
 
     connectedCallback() {

@@ -2,18 +2,6 @@
   padding-top: 7px;
 }
 
-.usa-social-link--linkedin {
-  background-image: url(sfsites/c/resource/USWDS/extras/linkedin.svg),
-    linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
-}
-
-.usa-social-link--home {
-  background-image: url(sfsites/c/resource/USWDS/extras/home.svg),
-    linear-gradient(transparent, transparent);
-  background-repeat: no-repeat;
-}
-
 @media (min-width: 30em) {
   .usa-footer--big
     .usa-footer__primary-content--collapsible
