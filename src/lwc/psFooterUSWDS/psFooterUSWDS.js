@@ -81,7 +81,19 @@ export default class PsFooterUSWDS extends LightningElement {
           if (this.config.logoIcon.startsWith('/resource'))
           {
               //return 'sfsites/c' + this.config.logoIcon;
-              return BASEPATH.replace('/s', this.config.logoIcon)
+
+              var res;
+        
+              if (window.location.href.indexOf('livepreview') != -1)
+              {
+                res = '/sfsites/c' + this.config.logoIcon;
+              }
+              else
+              {
+                 res = BASEPATH.replace('/s', this.config.logoIcon);
+              }
+
+              return res;
           }
           else
           {
@@ -185,7 +197,21 @@ export default class PsFooterUSWDS extends LightningElement {
     get linkedinStyle() {
         var style;
 
-        let res = BASEPATH.replace('/s', '/resource/USWDS/extras/linkedin.svg')
+        console.log('linkedinStyle BASEPATH=' + BASEPATH);
+        console.log('linkedinStyle window.location.href=' + window.location.href);
+
+        var res;
+        
+        if (window.location.href.indexOf('livepreview') != -1)
+        {
+          res = '/sfsites/c/resource/USWDS/extras/linkedin.svg';
+        }
+        else
+        {
+           res = BASEPATH.replace('/s', '/resource/USWDS/extras/linkedin.svg');
+        }
+        //let res = BASEPATH.replace('/s', '/s/sfsites/c/resource/USWDS/extras/linkedin.svg')
+
 
         style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
 
@@ -201,7 +227,16 @@ export default class PsFooterUSWDS extends LightningElement {
     get homeStyle() {
         var style;
 
-        let res = BASEPATH.replace('/s', '/resource/USWDS/extras/home.svg')
+        var res;
+        
+        if (window.location.href.indexOf('livepreview') != -1)
+        {
+          res = '/sfsites/c/resource/USWDS/extras/home.svg';
+        }
+        else
+        {
+           res = BASEPATH.replace('/s', '/resource/USWDS/extras/home.svg');
+        }
 
         style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
 
