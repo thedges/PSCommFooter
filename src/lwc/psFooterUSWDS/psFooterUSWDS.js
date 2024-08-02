@@ -206,10 +206,16 @@ export default class PsFooterUSWDS extends LightningElement {
         {
           res = '/sfsites/c/resource/USWDS/extras/linkedin.svg';
         }
-        else
+        /* else
         {
            res = BASEPATH.replace('/s', '/resource/USWDS/extras/linkedin.svg');
         }
+        */
+        else if (BASEPATH.endsWith('/s'))
+        {
+           res = BASEPATH.substring(0, BASEPATH.length - 2) + '/resource/USWDS/extras/linkedin.svg';
+        }
+        console.log('res=' + res);
         //let res = BASEPATH.replace('/s', '/s/sfsites/c/resource/USWDS/extras/linkedin.svg')
 
 
@@ -233,10 +239,18 @@ export default class PsFooterUSWDS extends LightningElement {
         {
           res = '/sfsites/c/resource/USWDS/extras/home.svg';
         }
+        /*
         else
         {
            res = BASEPATH.replace('/s', '/resource/USWDS/extras/home.svg');
         }
+        */
+        else if (BASEPATH.endsWith('/s'))
+        {
+
+           res = BASEPATH.substring(0, BASEPATH.length - 2) + '/resource/USWDS/extras/home.svg';
+        }
+        console.log('res=' + res);
 
         style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
 
