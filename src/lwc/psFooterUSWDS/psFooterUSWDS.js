@@ -84,14 +84,15 @@ export default class PsFooterUSWDS extends LightningElement {
 
               var res;
         
-              if (window.location.href.indexOf('livepreview') != -1)
+              if (window.location.href.indexOf('live-preview') != -1)
               {
                 res = '/sfsites/c' + this.config.logoIcon;
               }
               else
-              {
-                 res = BASEPATH.replace('/s', this.config.logoIcon);
-              }
+                {
+                    res = BASEPATH.substring(0, BASEPATH.length - 2) + this.config.logoIcon;
+                }
+
 
               return res;
           }
@@ -202,7 +203,7 @@ export default class PsFooterUSWDS extends LightningElement {
 
         var res;
         
-        if (window.location.href.indexOf('livepreview') != -1)
+        if (window.location.href.indexOf('live-preview') != -1)
         {
           res = '/sfsites/c/resource/USWDS/extras/linkedin.svg';
         }
@@ -235,7 +236,7 @@ export default class PsFooterUSWDS extends LightningElement {
 
         var res;
         
-        if (window.location.href.indexOf('livepreview') != -1)
+        if (window.location.href.indexOf('live-preview') != -1)
         {
           res = '/sfsites/c/resource/USWDS/extras/home.svg';
         }
@@ -258,7 +259,6 @@ export default class PsFooterUSWDS extends LightningElement {
         {
             style = style + '; background-color: ' + this.config.secondaryColor4;
         }  
-
         return style;
 
     }
