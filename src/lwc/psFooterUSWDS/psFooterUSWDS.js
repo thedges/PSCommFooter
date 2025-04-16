@@ -75,6 +75,15 @@ export default class PsFooterUSWDS extends LightningElement {
         return null;
     }
 
+    // if Email Signup is present, set Primary Links div to span 8 cols. Otherwise span 12 cols.
+    get primaryLinksColumns() {
+        if (this.config && this.config.emailSignup)
+        {
+            return "tablet:grid-col-8"
+        }
+        return "tablet:grid-col-12"
+    }
+
     get logoIcon() {
         if (this.config && this.config.logoIcon)
         {
@@ -119,153 +128,54 @@ export default class PsFooterUSWDS extends LightningElement {
         }
     }
 
-    get primaryFooterStyle() {
-      if (this.config.primaryColor1)
-      {
-          return 'background-color: ' + this.config.primaryColor1;
-      }
-    }
-
-    get secondaryFooterStyle() {
-        if (this.config.secondaryColor1)
-        {
-            return 'background-color: ' + this.config.secondaryColor1;
-        }
-    }
-
-    get topicStyle() {
-        if (this.config.primaryColor2)
-        {
-            return 'color: ' + this.config.primaryColor2;
-        }
-    }
-
-    get linkStyle() {
-        if (this.config.primaryColor3)
-        {
-            return 'color: ' + this.config.primaryColor3;
-        }
-    }
-
-    get primaryLinkStyle() {
-        if (this.config.primaryColor2)
-        {
-            return 'color: ' + this.config.primaryColor2;
-        }
-    }
-
-    get emailTextStyle() {
-        if (this.config.primaryColor4)
-        {
-            return 'color: ' + this.config.primaryColor4;
-        }
-    }
-
-    get primaryLabelStyle() {
-        /*
-        if (this.config.secondaryColor2)
-        {
-            return 'color: ' + this.config.secondaryColor2;
-        }
-        */
-       if (this.config.primaryColor2)
-       {
-           return 'color: ' + this.config.primaryColor2;
-       }
-    }
-
-    get secondaryLabelStyle() {
-        if (this.config.secondaryColor3)
-        {
-            return 'color: ' + this.config.secondaryColor3;
-        }
-    }
-
-    get secondarySubLabelStyle() {
-        if (this.config.secondaryColor3)
-        {
-            return 'color: ' + this.config.secondaryColor3;
-        }  
-    }
-
-    get socialStyle() {
-        if (this.config.secondaryColor4)
-        {
-            return 'background-color: ' + this.config.secondaryColor4;
-        }  
-    }
-
-    get linkedinStyle() {
-        var style;
-
-        console.log('linkedinStyle BASEPATH=' + BASEPATH);
-        console.log('linkedinStyle window.location.href=' + window.location.href);
-
-        var res;
-        
-        if (window.location.href.indexOf('live-preview') != -1)
-        {
-          res = '/sfsites/c/resource/USWDS/extras/linkedin.svg';
-        }
-        /* else
-        {
-           res = BASEPATH.replace('/s', '/resource/USWDS/extras/linkedin.svg');
-        }
-        */
-        else if (BASEPATH.endsWith('/s'))
-        {
-           res = BASEPATH.substring(0, BASEPATH.length - 2) + '/resource/USWDS/extras/linkedin.svg';
-        }
-        console.log('res=' + res);
-        //let res = BASEPATH.replace('/s', '/s/sfsites/c/resource/USWDS/extras/linkedin.svg')
-
-
-        style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
-
-        if (this.config.secondaryColor4)
-        {
-            style = style + '; background-color: ' + this.config.secondaryColor4;
-        }  
-
-        return style;
-
-    }
-
-    get homeStyle() {
-        var style;
-
-        var res;
-        
-        if (window.location.href.indexOf('live-preview') != -1)
-        {
-          res = '/sfsites/c/resource/USWDS/extras/home.svg';
-        }
-        /*
-        else
-        {
-           res = BASEPATH.replace('/s', '/resource/USWDS/extras/home.svg');
-        }
-        */
-        else if (BASEPATH.endsWith('/s'))
-        {
-
-           res = BASEPATH.substring(0, BASEPATH.length - 2) + '/resource/USWDS/extras/home.svg';
-        }
-        console.log('res=' + res);
-
-        style = 'background-image: url(' + res + '), linear-gradient(transparent, transparent); background-repeat: no-repeat;';
-
-        if (this.config.secondaryColor4)
-        {
-            style = style + '; background-color: ' + this.config.secondaryColor4;
-        }  
-        return style;
-
-    }
+    
 
     connectedCallback() {
         Promise.all([
             loadStyle(this, USWDS + '/css/uswds.min.css')
         ]);
+
+    }
+
+    renderedCallback() {
+        this.setCSSProperty("footer", "--primary-color-1", this.config.primaryColor1);
+        this.setCSSProperty("footer", "--primary-color-1-accessible", this.getAccessibleColor(this.config.primaryColor1));
+        this.setCSSProperty("footer", "--primary-color-2", this.config.primaryColor2);
+        this.setCSSProperty("footer", "--primary-color-3", this.config.primaryColor3);
+        this.setCSSProperty("footer", "--primary-color-4", this.config.primaryColor4);
+        this.setCSSProperty("footer", "--primary-color-4-accessible", this.getAccessibleColor(this.config.primaryColor4));
+        this.setCSSProperty("footer", "--primary-color-5", this.config.primaryColor5);
+        this.setCSSProperty("footer", "--primary-color-5-accessible", this.getAccessibleColor(this.config.primaryColor5));
+        this.setCSSProperty("footer", "--secondary-color-1", this.config.secondaryColor1);
+        this.setCSSProperty("footer", "--secondary-color-2", this.config.secondaryColor2);
+        this.setCSSProperty("footer", "--secondary-color-3", this.config.secondaryColor3);
+        this.setCSSProperty("footer", "--secondary-color-4", this.config.secondaryColor4);
+        this.setCSSProperty("footer", "--secondary-color-4-accessible", this.getAccessibleColor(this.config.secondaryColor4));
+        this.setCSSProperty("footer", "--secondary-color-5", this.config.secondaryColor5);
+        this.setCSSProperty("footer", "--secondary-color-5-accessible", this.getAccessibleColor(this.config.secondaryColor5));
+    }
+    getAccessibleColor(baseColor) {
+        const regex = /^#(?:[0-9a-fA-F]{3}){1,2}$/
+        if (regex.test(baseColor)) {
+            console.log(`${baseColor} is a Hex Color`)
+            let hexColor = baseColor;
+            let red = parseInt(hexColor.substring(1, 3), 16);
+            let green = parseInt(hexColor.substring(3, 5), 16);
+            let blue = parseInt(hexColor.substring(5, 7), 16);
+            var sum = Math.round(((red * 299) + (green * 587) + (blue * 114)) / 1000);
+            return (sum > 128) ? 'black' : 'white';
+        } else {
+            console.log(`${baseColor} was not a Hex Color!`);
+            return null;
+        }
+    }
+    setCSSProperty(location, propName, color) {
+        if (color == null) {
+            console.log(`${color} is null`)
+            return
+        } else {
+            console.log(`Set ${color} to ${propName}`)
+            return this.template.querySelector(location).style.setProperty(propName, color)
+        }
     }
 }

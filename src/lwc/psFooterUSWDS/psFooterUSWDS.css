@@ -8,30 +8,17 @@
     .usa-list--unstyled {
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     padding-top: 0.25rem !important;
   }
-}
 
-@media (min-width: 64em) {
-  .grid-container {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-
-  .usa-footer__nav {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-  }
-
-  .usa-footer__primary-container {
-    padding-left: 0px !important;
-    padding-right: 0px !important;
+  div.usa-footer__primary-section:not(:has(.usa-sign-up)) .usa-footer__nav {
+    border-bottom:none;
   }
 }
 
 .grid-container, .usa-footer__primary-container, .usa-footer__nav {
-  max-width: 1100px;
+  max-width: 1440px;
 }
 
 .usa-footer__secondary-link a {

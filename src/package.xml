@@ -2,9 +2,7 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>PSCommFooterConfigPicklist</members>
-        <members>PSCommFooterConfigPicklistTest</members>
         <members>PSCommFooterController</members>
-        <members>PSCommFooterControllerTest</members>
         <name>ApexClass</name>
     </types>
     <types>

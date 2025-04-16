@@ -1,14 +1,37 @@
 <template>
     <template if:true={config}>
     <footer class={footerClass}>
-
-        <div class="usa-footer__primary-section" style={primaryFooterStyle}>
+<!-- SVG with all social icons as spites is below. Set to display:none. -->
+        <!--?xml version="1.0" encoding="UTF-8"?-->          
+            
+            
+        <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+            <symbol id="icon-facebook" viewBox="0 0 32 32">
+                <path d="M32 16.0588C32 7.18984 24.8365 0 16 0C7.1635 0 0 7.18984 0 16.0588C0 23.5902 5.16575 29.9093 12.1348 31.6447V20.9661H8.8355V16.0588H12.1348V13.9443C12.1348 8.47832 14.5993 5.94503 19.9458 5.94503C20.9595 5.94503 22.7085 6.14426 23.424 6.344V10.7925C23.0465 10.7526 22.3905 10.7326 21.5755 10.7326C18.952 10.7326 17.9383 11.73 17.9383 14.3232V16.0588H23.1645L22.2668 20.9661H17.9383V32C25.8608 31.0397 32 24.2692 32 16.0588Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-youtube" viewBox="0 0 32 32">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.297 6.71821C30.7934 7.21789 31.15 7.83922 31.3309 8.52C32 11.0327 32 16.2727 32 16.2727C32 16.2727 32 21.5127 31.3309 24.0255C31.15 24.7062 30.7934 25.3276 30.297 25.8272C29.8005 26.3269 29.1814 26.6875 28.5018 26.8727C26 27.5455 16 27.5455 16 27.5455C16 27.5455 6 27.5455 3.49818 26.8727C2.81857 26.6875 2.19955 26.3269 1.70305 25.8272C1.20655 25.3276 0.850007 24.7062 0.669091 24.0255C0 21.5127 0 16.2727 0 16.2727C0 16.2727 0 11.0327 0.669091 8.52C0.850007 7.83922 1.20655 7.21789 1.70305 6.71821C2.19955 6.21852 2.81857 5.858 3.49818 5.67273C6 5 16 5 16 5C16 5 26 5 28.5018 5.67273C29.1814 5.858 29.8005 6.21852 30.297 6.71821ZM21.0909 16.2728L12.7273 11.5146V21.031L21.0909 16.2728Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-x" viewBox="0 0 32 32">
+                <path d="M0.0780192 1L12.4329 17.5468L0 31H2.79814L13.6831 19.2215L22.4778 31H32L18.95 13.5225L30.5224 1H27.7243L17.6998 11.8478L9.60019 1H0.0780192ZM4.19289 3.0645H8.5674L27.8845 28.9352H23.51L4.19289 3.0645Z" fill="black"/><path d="M0.0780192 1L12.4329 17.5468L0 31H2.79814L13.6831 19.2215L22.4778 31H32L18.95 13.5225L30.5224 1H27.7243L17.6998 11.8478L9.60019 1H0.0780192ZM4.19289 3.0645H8.5674L27.8845 28.9352H23.51L4.19289 3.0645Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-linkedin" viewBox="0 0 32 32">
+                <path d="M29.6378 0H2.36222C1.73572 0 1.13488 0.248877 0.691879 0.691879C0.248877 1.13488 0 1.73572 0 2.36222V29.6378C0 30.2643 0.248877 30.8651 0.691879 31.3081C1.13488 31.7511 1.73572 32 2.36222 32H29.6378C30.2643 32 30.8651 31.7511 31.3081 31.3081C31.7511 30.8651 32 30.2643 32 29.6378V2.36222C32 1.73572 31.7511 1.13488 31.3081 0.691879C30.8651 0.248877 30.2643 0 29.6378 0ZM9.53778 27.26H4.72667V11.9778H9.53778V27.26ZM7.12889 9.86C6.58315 9.85693 6.05055 9.69226 5.59831 9.38678C5.14607 9.08131 4.79445 8.64871 4.58784 8.14359C4.38122 7.63846 4.32886 7.08346 4.43737 6.54861C4.54589 6.01376 4.8104 5.52304 5.19754 5.13838C5.58468 4.75372 6.07709 4.49236 6.61262 4.38728C7.14816 4.28221 7.70282 4.33812 8.2066 4.54798C8.71039 4.75784 9.14072 5.11222 9.44329 5.56642C9.74585 6.02061 9.9071 6.55426 9.90667 7.1C9.91182 7.46538 9.84335 7.82805 9.70535 8.16641C9.56735 8.50476 9.36264 8.81187 9.10343 9.06942C8.84421 9.32698 8.5358 9.52971 8.19657 9.66553C7.85733 9.80136 7.49423 9.86749 7.12889 9.86ZM27.2711 27.2733H22.4622V18.9244C22.4622 16.4622 21.4156 15.7022 20.0644 15.7022C18.6378 15.7022 17.2378 16.7778 17.2378 18.9867V27.2733H12.4267V11.9889H17.0533V14.1067H17.1156C17.58 13.1667 19.2067 11.56 21.6889 11.56C24.3733 11.56 27.2733 13.1533 27.2733 17.82L27.2711 27.2733Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-home" viewBox="0 0 32 32">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M27.4327 11.9775L31.7793 15.6656C31.9113 15.7737 31.9841 15.9189 31.9976 16.1009C32.0114 16.2833 31.965 16.4423 31.8592 16.5776L30.6285 18.077C30.5219 18.1982 30.3834 18.273 30.2117 18.2997H30.152C29.9799 18.2997 29.8413 18.2526 29.7352 18.1584L16.0001 6.46537L2.26508 18.1584C2.10622 18.2665 1.94737 18.3139 1.78852 18.3003C1.61645 18.2731 1.47769 18.1988 1.37167 18.0773L0.141095 16.5776C0.035077 16.4426 -0.011154 16.2834 0.0022634 16.1011C0.0157503 15.9187 0.0882599 15.7735 0.220557 15.6656L14.492 3.52687C14.9154 3.1756 15.4182 3 16.0005 3C16.5828 3 17.0857 3.1756 17.5086 3.52687L22.3516 7.66099V3.70943C22.3516 3.52048 22.411 3.36497 22.53 3.24331C22.6492 3.1218 22.8014 3.06104 22.9867 3.06104H26.7975C26.9831 3.06104 27.1353 3.1218 27.2538 3.24331C27.3732 3.36497 27.4327 3.52041 27.4327 3.70943V11.9775ZM3.02277 18.98L15.9998 8.33333L28.9772 18.98C28.9918 19.0093 29 19.0545 29 19.1143V28.2284C29 28.6178 28.8565 28.9553 28.5706 29.2391C28.2852 29.524 27.9462 29.6667 27.5551 29.6667H18.8889V21.0414H13.1107V29.6664H4.44447C4.05326 29.6664 3.71477 29.5233 3.42892 29.2391C3.143 28.955 3 28.6177 3 28.2284V19.1143C3 19.2376 3.00125 19.2103 3.00367 19.1575C3.00555 19.1166 3.00814 19.0603 3.01138 19.0472C3.01897 19.0171 3.02277 18.995 3.02277 18.98Z" fill="currentColor"/>
+            </symbol>
+            <symbol id="icon-rss" viewBox="0 0 32 32">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5893 9.40934C25.4225 12.2274 27.6495 15.4505 29.2706 19.0795L29.2718 19.0778C30.8929 22.7062 31.8023 26.5053 31.9986 30.4751C32.0282 30.8846 31.8924 31.2399 31.5891 31.5428C31.3161 31.8463 30.968 31.9981 30.544 31.9981H27.2944C26.9005 31.9981 26.5633 31.865 26.2827 31.6C26.0026 31.335 25.8551 31.0129 25.8392 30.6344C25.6579 27.3769 24.8928 24.283 23.5435 21.3508C22.1963 18.4192 20.4418 15.8737 18.2828 13.7147C16.1239 11.5557 13.5786 9.80264 10.647 8.45399C7.71537 7.10589 4.62087 6.33296 1.36346 6.13604C0.984668 6.12042 0.662777 5.97258 0.397789 5.69253C0.132801 5.41248 -0.00025177 5.08278 -0.00025177 4.70398V1.45439C-0.00025177 1.03013 0.151489 0.681458 0.454413 0.409217C0.727211 0.136698 1.06054 1.90735e-05 1.45439 1.90735e-05H1.52218C5.49198 0.196947 9.29108 1.10628 12.9195 2.72801C16.5481 4.34946 19.7712 6.5762 22.5893 9.40934ZM1.2725 24.5449C2.12102 23.6964 3.15113 23.2724 4.36366 23.2724C5.57619 23.2724 6.60657 23.6967 7.45454 24.5452C8.3025 25.3931 8.72648 26.4235 8.72648 27.6358C8.72648 28.848 8.30222 29.8779 7.4537 30.7264C6.60574 31.5749 5.57535 31.9989 4.3631 31.9989C3.1514 31.9989 2.12102 31.5746 1.2725 30.7261C0.423977 29.8781 -4.78327e-06 28.848 -4.78327e-06 27.6355C-4.78327e-06 26.4235 0.424535 25.3934 1.2725 24.5449ZM8.52202 13.4662C10.734 14.4887 12.696 15.8639 14.4081 17.5905L14.4073 17.5913C16.1344 19.3034 17.5093 21.2655 18.5319 23.4774C19.5545 25.6894 20.1645 28.0073 20.3617 30.4313C20.3916 30.8555 20.2627 31.219 19.9754 31.523C19.702 31.841 19.3461 32 18.9071 32H15.8388C15.46 32 15.1345 31.8748 14.8625 31.6246C14.5891 31.3746 14.4374 31.06 14.4078 30.6806C14.0745 27.2112 12.6768 24.2453 10.2149 21.7837C7.75272 19.3218 4.78764 17.9241 1.31768 17.5908C0.93917 17.5606 0.62481 17.4095 0.374884 17.1361C0.124958 16.8633 0.000273999 16.5375 0.000273999 16.159V13.0913C0.000273999 12.6517 0.159267 12.2955 0.477253 12.0229C0.73471 11.7655 1.06051 11.6363 1.45436 11.6363H1.56817C3.99212 11.8335 6.31007 12.4433 8.52202 13.4662Z" fill="currentColor"/>
+            </symbol>
+        </svg>
+        <div class="usa-footer__primary-section">
             <template if:true={isDefault}>
                 <nav class="usa-footer__nav" aria-label="Footer navigation">
                     <ul class="grid-row grid-gap">
                         <template for:each={config.primayLinks} for:item="link">
                             <li class="mobile-lg:grid-col-4 desktop:grid-col-auto usa-footer__primary-content" key={link.id}>
-                                <a class="usa-footer__primary-link" href={link.url} style={primaryLinkStyle}>{link.label}</a>
+                                <a class="usa-footer__primary-link" href={link.url}>{link.label}</a>
                             </li>
                         </template>
                     </ul>
@@ -17,18 +40,18 @@
             <template if:true={isBig}>
             <div class="grid-container">
                 <div class="grid-row grid-gap">
-                    <div class="tablet:grid-col-8">
+                    <div class={primaryLinksColumns}>
                         <nav class="usa-footer__nav" aria-label="Footer navigation">
                             <div class="grid-row grid-gap-4">
                                 <template for:each={config.topics} for:item="topic">
                                     <div class="mobile-lg:grid-col-6 desktop:grid-col-3" key={topic.id}>
                                         <section
                                             class="usa-footer__primary-content usa-footer__primary-content--collapsible">
-                                            <h4 class="usa-footer__primary-link" style={topicStyle}>{topic.label}</h4>
+                                            <h4 class="usa-footer__primary-link">{topic.label}</h4>
                                             <ul class="usa-list usa-list--unstyled">
                                                 <template for:each={topic.links} for:item="link">
                                                     <li class="usa-footer__secondary-link" key={link.id}><a
-                                                            href={link.url} style={linkStyle}>{link.label}</a></li>
+                                                            href={link.url}>{link.label}</a></li>
                                                 </template>
                                             </ul>
 
@@ -41,9 +64,9 @@
                     <div class="tablet:grid-col-4">
                         <template if:true={isEmailSignup}>
                             <div class="usa-sign-up">
-                                <h3 class="usa-sign-up__heading" style={emailTextStyle}>Sign up</h3>
+                                <h3 class="usa-sign-up__heading">Sign up</h3>
                                 <form class="usa-form">
-                                    <label class="usa-label" for="email" id=""  style={emailTextStyle}>Your email address</label>
+                                    <label class="usa-label" for="email" id="">Your email address</label>
                                     <input class="usa-input" id="email" name="email" type="email">
                                     <button class="usa-button" type="submit">Sign up</button>
                                 </form>
@@ -60,7 +83,7 @@
                         <ul class="grid-row grid-gap">
                             <template for:each={config.primayLinks} for:item="link">
                                 <li class="mobile-lg:grid-col-6 desktop:grid-col-auto usa-footer__primary-content" key={link.id}>
-                                    <a class="usa-footer__primary-link" href={link.url} style={primaryLinkStyle}>{link.label}</a>
+                                    <a class="usa-footer__primary-link" href={link.url}>{link.label}</a>
                                 </li>
                             </template>
                         </ul>
@@ -72,14 +95,14 @@
                             <template if:true={isPhone}>
                             <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
                                 <div class="usa-footer__contact-info">
-                                    <a href={phoneURL} style={secondarySubLabelStyle}>{config.phone}</a>
+                                    <a href={phoneURL}>{config.phone}</a>
                                 </div>
                             </div>
                             </template>
                             <template if:true={isEmail}>
                             <div class="grid-col-auto mobile-lg:grid-col-12 desktop:grid-col-auto">
                                 <div class="usa-footer__contact-info">
-                                    <a href={emailURL} style={secondarySubLabelStyle}>{config.email}</a>
+                                    <a href={emailURL}>{config.email}</a>
                                 </div>
                             </div>
                             </template>
@@ -89,7 +112,7 @@
             </div>
            </template>
         </div>
-        <div class="usa-footer__secondary-section"  style={secondaryFooterStyle}>
+        <div class="usa-footer__secondary-section">
             <div class="grid-container">
                 <div class="grid-row grid-gap">
                     <div class="usa-footer__logo grid-row mobile-lg:grid-col-6 mobile-lg:grid-gap-2">
@@ -97,67 +120,85 @@
                             <img class="usa-footer__logo-img" src={logoIcon} alt="">
                         </div>
                         <div class="mobile-lg:grid-col-auto">
-                            <h3 class="usa-footer__logo-heading" style={primaryLabelStyle}>{config.primaryLabel}</h3>
+                            <h3 class="usa-footer__logo-heading">{config.primaryLabel}</h3>
                         </div>
                     </div>
                     <div class="usa-footer__contact-links mobile-lg:grid-col-6">
                         <template if:true={isNotSlim}>
-                        <div class="usa-footer__social-links grid-row grid-gap-1">
-                            <template if:true={isFacebook}>
-                                <div class="grid-col-auto">
-                                    <a class="usa-social-link usa-social-link--facebook" href={config.facebook} style={socialStyle}>
-                                        <span>Facebook</span>
-                                    </a>
-                                </div>
-                            </template>
-                            <template if:true={isTwitter}>
-                                <div class="grid-col-auto">
-                                    <a class="usa-social-link usa-social-link--twitter" href={config.twitter} style={socialStyle}>
-                                        <span>Twitter</span>
-                                    </a>
-                                </div>
-                            </template>
-                            <template if:true={isYoutube}>
-                                <div class="grid-col-auto">
-                                    <a class="usa-social-link usa-social-link--youtube" href={config.youtube} style={socialStyle}>
-                                        <span>YouTube</span>
-                                    </a>
-                                </div>
-                            </template>
-                            <template if:true={isRSS}>
-                                <div class="grid-col-auto">
-                                    <a class="usa-social-link usa-social-link--rss" href={config.rss} style={socialStyle}>
-                                        <span>RSS</span>
-                                    </a>
-                                </div>
-                            </template>
-                            <template if:true={isLinkedIn}>
-                                <div class="grid-col-auto">
-                                    <a class="usa-social-link usa-social-link--linkedin" href={config.linkedin} style={linkedinStyle}>
-                                        <span>LinkedIn</span>
-                                    </a>
-                                </div>
-                            </template>
-                            <template if:true={isHome}>
-                                <div class="grid-col-auto">
-                                    <a class="usa-social-link usa-social-link--home" href={config.home} style={homeStyle}>
-                                        <span>Home</span>
-                                    </a>
-                                </div>
-                            </template>
-                        </div>
-                        <h3 class="usa-footer__contact-heading" style={secondaryLabelStyle}>{config.secondaryLabel}</h3>
+                            <div class="usa-footer__social-links grid-row grid-gap-1">
+                                <template if:true={isFacebook}>
+                                    <div class="grid-col-auto">
+                                        <a class="usa-social-link" href={config.facebook}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="usa-social-icon">
+                                                <use xlink:href="#icon-facebook"></use>
+                                            </svg>
+                                            <span>Facebook</span>
+                                        </a>
+                                    </div>
+                                </template>
+                                <template if:true={isTwitter}>
+                                    <div class="grid-col-auto">
+                                        <a class="usa-social-link" href={config.twitter}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="usa-social-icon">
+                                                <use xlink:href="#icon-x"></use>
+                                            </svg>
+                                            <span>X.com</span>
+                                        </a>
+                                    </div>
+                                </template>
+                                <template if:true={isYoutube}>
+                                    <div class="grid-col-auto">
+                                        <a class="usa-social-link" href={config.youtube}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="usa-social-icon">
+                                                <use xlink:href="#icon-youtube"></use>
+                                            </svg>
+                                            <span>YouTube</span>
+                                        </a>
+                                    </div>
+                                </template>
+                                <template if:true={isLinkedIn}>
+                                    <div class="grid-col-auto">
+                                        <a class="usa-social-link" href={config.linkedin}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="usa-social-icon">
+                                                <use xlink:href="#icon-linkedin"></use>
+                                            </svg>
+                                            <span>LinkedIn</span>
+                                        </a>
+                                    </div>
+                                </template>
+                                <template if:true={isRSS}>
+                                    <div class="grid-col-auto">
+                                        <a class="usa-social-link" href={config.rss}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="usa-social-icon">
+                                                <use xlink:href="#icon-rss"></use>
+                                            </svg>
+                                            <span>RSS</span>
+                                        </a>
+                                    </div>
+                                </template>
+                                <template if:true={isHome}>
+                                    <div class="grid-col-auto">
+                                        <a class="usa-social-link" href={config.home}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="usa-social-icon">
+                                                <use xlink:href="#icon-home"></use>
+                                            </svg>
+                                            <span>Home</span>
+                                        </a>
+                                    </div>
+                                </template>
+                            </div>
+                        <h3 class="usa-footer__contact-heading">{config.secondaryLabel}</h3>
 
                         <address class="usa-footer__address">
                             <div class="usa-footer__contact-info grid-row grid-gap">
                                 <template if:true={isPhone}>
                                     <div class="grid-col-auto">
-                                        <a href={phoneURL}  style={secondarySubLabelStyle}>{config.phone}</a>
+                                        <a href={phoneURL}>{config.phone}</a>
                                     </div>
                                 </template>
                                 <template if:true={isEmail}>
                                     <div class="grid-col-auto">
-                                        <a href={emailURL}  style={secondarySubLabelStyle}>{config.email}</a>
+                                        <a href={emailURL}>{config.email}</a>
                                     </div>
                                 </template>
                             </div>
